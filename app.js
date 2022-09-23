@@ -1,8 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const { route } = require('./routes/route.js');
-const app = express();  // creating instance of express app so as to use of the methods of express
+const app = express();                                  // creating instance of express app so as to use the methods of express
 const routes = require('./routes/route.js');
 const PORT = 2000;
 
@@ -15,7 +14,7 @@ app.use(express.json());                                // for parsing the incom
 app.use(express.urlencoded({ extended: false }));       // same as above 
 
 
-app.use('/', routes) // for redirecting all the requests to the routes folder
+app.use('/', routes)                                    // all the requests are being handles by routes folder
 
 
 app.listen(PORT, () => {
