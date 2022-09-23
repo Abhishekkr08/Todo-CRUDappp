@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ui</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Internship Assessment Task</h1>
+        <form class="add-task" action="/home" method="POST">
+            <div class="special-cont">
+                <input type="text" name="firstname" placeholder="Enter your firstname" value="" required>
+
+                <input class="slider1 disable" type="text" name="lastname" placeholder="Enter your lastname" value="" required>
+
+                <input class="slider2 disable" type="text" name="city" placeholder="Enter your city name" value="" required>
+
+                <input class="slider3 disable" type="text" name="taskname" placeholder="Enter the task" value="" required>
+
+                <a class="add-more">Add more <i style="margin-left: 1px;" class="fa-solid fa-plus"></i></a>
+            </div>
+            <p style="color: rgb(0, 155, 0); font-size:1.6rem;">{{success_msg}}</p>
+            <p style="color: red;">{{failure_msg}}</p>
+            <input class="submit-btn" type="submit" value="Submit">
+        </form>
+            <p style="font-size: 1.1rem;">click <a href="/home">here</a> to add more tasks</p>
+    </div>
+</body>
+
+</html>
